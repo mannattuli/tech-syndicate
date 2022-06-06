@@ -1,0 +1,20 @@
+<nav>
+    [<%= link_to 'HOME', root_path %>]
+
+    <span class="separator">-</span>
+
+    [<%= link_to 'homework', homeworks_path %>]
+
+    <% if user_signed_in? && current_user.admin %>
+
+        <span class="separator">-</span>
+
+        [<%= link_to 'new homework', new_homework_path %>]
+
+        <span class="separator">-</span>
+
+        [<%= link_to 'result' %>]
+
+    <% end %>
+
+</nav>

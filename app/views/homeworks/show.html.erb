@@ -1,0 +1,32 @@
+<br />
+<div>
+  <div>
+    <div>
+      Subject:
+      <%= @homework.subject %>
+    </div>
+
+    <div>
+    Description:
+      <%= @homework.desc %>
+    </div>
+
+    <div>
+    End Date:
+      <%= @homework.end %>
+    </div>
+  </div>
+</div>
+
+<br /><br />
+
+
+<%= link_to "Back to homeworks", homeworks_path %>
+<% if user_signed_in? && current_user.admin %>
+<div>
+  <%= link_to "Edit this homework", edit_homework_path(@homework) %>
+
+  <%= button_to "Destroy this homework", @homework, method: :delete %>
+</div>
+<% true %>
+<% end %>

@@ -1,0 +1,17 @@
+<div class="loggedin" style="float: left">
+    <% if !user_signed_in? %>
+        <div style="text-align:center;">
+            <span>Want to join?
+            <%= link_to "Log in", user_session_path %>
+            or
+            <%= link_to "sign up", new_user_registration_path %> in seconds.</span>
+    </div>
+    <% else %>
+        <%= current_user.email %>
+
+        <span class="separator">|</span>
+
+        <%= link_to 'log out', destroy_user_session_path %>
+    <% end %>
+</div>
+<br /><br /><br />

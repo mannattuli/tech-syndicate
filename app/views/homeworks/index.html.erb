@@ -1,0 +1,42 @@
+<h1>Homeworks</h1>
+
+<table id="homeworks">
+
+<thead>
+  <tr>
+    <th>
+      <strong>Subject:</strong>
+    </th>
+
+    <th>
+      <strong>Desc:</strong>
+    </th>
+
+    <th>
+      <strong>End Date:</strong>
+    </th>
+  </tr>
+</thead>
+
+  <% @homeworks.each do |homework| %>
+<tbody>
+  <tr>
+    <td>
+      <%= homework.subject %>
+    </td>
+
+    <td>
+      <%= homework.desc %>
+    </td>
+
+    <td>
+      <%= homework.end %>
+    </td>
+
+    <td>
+      <%= link_to "Show this homework", homework %>
+    </td>
+  </tr>
+</tbody>
+  <% end %>
+</table>
