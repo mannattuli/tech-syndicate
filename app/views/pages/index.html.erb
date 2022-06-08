@@ -2,4 +2,11 @@
 
 <%= image_tag "studying.jpg", class: 'image-home' %>
 
-<h3>"Quotee"</h3>
+<h3>"<%=
+    num = rand(1..35)
+    url = "https://type.fit/api/quotes"
+    response = RestClient.get(url)
+    hash = JSON.parse response
+    render html: hash[num]["text"]  
+
+%>"</h3>

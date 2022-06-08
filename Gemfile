@@ -75,4 +75,5 @@ group :production do
   gem 'pg', '~> 1.2', '>= 1.2.3'
 end
 
+gem "rest-client"
 gem "devise", "~> 4.8"

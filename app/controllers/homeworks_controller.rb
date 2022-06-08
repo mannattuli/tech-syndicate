@@ -3,7 +3,7 @@ class HomeworksController < ApplicationController
 
   # GET /homeworks or /homeworks.json
   def index
-    @homeworks = Homework.all
+    @homeworks = Homework.order('created_at DESC')
   end
 
   # GET /homeworks/1 or /homeworks/1.json
