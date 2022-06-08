@@ -5,9 +5,7 @@
 
     <% if user_signed_in? && current_user.admin %>
 
-        <%= link_to 'Add Homework', new_homework_path %>
-
-        <%= link_to 'Result' %>
+        <%= link_to 'Admin Panel', admin_path %>
 
     <% end %>
     <span class="loggedin" style="display: inline">

@@ -3,7 +3,15 @@ class HomeworksController < ApplicationController
 
   # GET /homeworks or /homeworks.json
   def index
-    @homeworks = Homework.order('created_at DESC')
+    # @homeworks = Homework.order('created_at DESC')
+    # @homeworks = Homework.search(params[:search])
+    
+      if params[:search]
+        @homeworks = Homework.where(subject: params[:search]).all
+      else
+        @homeworks = Homework.all
+      end
+
   end
 
   # GET /homeworks/1 or /homeworks/1.json

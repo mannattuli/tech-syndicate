@@ -131,3 +131,12 @@ input:focus {
   outline: none;
   border-radius: 0px;
 }
+
+.search {
+  height: fit-content;
+  width: 200px;
+}
+.submit {
+  height: fit-content;
+  width: fit-content;
+}

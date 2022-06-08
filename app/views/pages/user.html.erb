@@ -1,0 +1,12 @@
+<h1>List of Students</h1>
+
+<% @users = User.all %>
+<div class="center">
+<% @users.each do |user| %>
+<% if !user.admin %>
+    <div>
+        <%= user.email.split('@')[0] %>
+    </div>
+<% end %>
+<% end %>
+</div>
