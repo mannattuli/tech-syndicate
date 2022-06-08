@@ -1,20 +1,28 @@
 <nav>
-    [<%= link_to 'HOME', root_path %>]
+    <h3 style="display: inline"><%= link_to 'H.C.E.T', root_path %></h3>
 
-    <span class="separator">-</span>
-
-    [<%= link_to 'homework', homeworks_path %>]
+    <%= link_to 'Homework', homeworks_path %>
 
     <% if user_signed_in? && current_user.admin %>
 
-        <span class="separator">-</span>
+        <%= link_to 'Add Homework', new_homework_path %>
 
-        [<%= link_to 'new homework', new_homework_path %>]
-
-        <span class="separator">-</span>
-
-        [<%= link_to 'result' %>]
+        <%= link_to 'Result' %>
 
     <% end %>
+    <span class="loggedin" style="display: inline">
+        <% if !user_signed_in? %>
+            <span style="text-align:center;">
+
+                <%= link_to "Log In", user_session_path, class: "btn-log" %>
+                
+                <%= link_to "Sign Up", new_user_registration_path, class: "btn-log" %>
+            </span>
+        <% else %>
+            <span style="margin-right: 10px"><%= current_user.email %></span>
+
+            <%= link_to 'Log Out', destroy_user_session_path, class: 'btn-log' %>
+        <% end %>
+    </span>
 
 </nav>

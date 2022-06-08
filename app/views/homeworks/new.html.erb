@@ -1,4 +1,6 @@
 <% if current_user.admin %>
+<div class="center">
+<br /><br />
 <h1>New homework</h1>
 
 <%= render "form", homework: @homework %>
@@ -7,5 +9,6 @@
 
 <div>
   <%= link_to "Back to homeworks", homeworks_path %>
+</div>
 </div>
 <% end %>

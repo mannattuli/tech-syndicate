@@ -1,15 +1,133 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  margin: 0px;
+  background-color: #121212;
+  color: #eee;
+}
+.image-home {
+  width: 100%;
+  height: 40vw;
+  /* position: absolute; */
+}
+h1,
+h3 {
+  text-align: center;
+}
+
+nav {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.current {
+  text-decoration: none;
+  padding: 7px 9px 7px 9px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  color: #fff;
+}
+
+nav a {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 7px 9px 7px 9px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  margin-right: 10px;
+  color: rgba(136, 136, 136, 1) !important;
+}
+
+.current:hover {
+  background-color: rgb(59, 59, 59);
+  border-radius: 7px;
+  color: #fff;
+}
+
+nav a:hover {
+  background-color: rgb(59, 59, 59);
+  border-radius: 7px;
+  color: rgba(136, 136, 136, 1);
+}
+
+nav {
+  padding-top: 10px;
+  text-align: center;
+}
+
+nav {
+  margin-right: 10px;
+}
+
+.btn-log {
+  display: inline;
+  border: 3px solid rgb(173, 173, 173);
+  border-radius: 10px;
+}
+
+a,
+a:visited {
+  color: #60a5fa;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+
+a:hover {
+  color: #2563eb;
+}
+
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+tr {
+  border: 3px solid rgb(156, 156, 156);
+}
+tr:hover {
+  background-color: rgb(49, 49, 49);
+  cursor: pointer;
+}
+th {
+  padding: 10px;
+  text-align: left;
+}
+td {
+  padding: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+.notice,
+#notice {
+  color: green;
+  text-align: center;
+}
+.alert,
+#alert {
+  color: red;
+  text-align: center;
+}
+
+input {
+  background-color: #eee;
+  border: 1px solid #000000;
+  width: 150px;
+  font-size: 15px;
+  height: 35px;
+  padding-left: 12px;
+  padding-right: 40px;
+  border-radius: 0px;
+  outline: none;
+}
+input:active,
+input:focus {
+  background-color: #eee;
+  border: 1px solid #000;
+  outline: none;
+  border-radius: 0px;
+}
