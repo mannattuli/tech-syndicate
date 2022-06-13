@@ -7,9 +7,9 @@ class HomeworksController < ApplicationController
     # @homeworks = Homework.search(params[:search])
     
       if params[:search]
-        @homeworks = Homework.where(subject: params[:search]).all
+        @homeworks = Homework.where(subject: params[:search]).order('created_at DESC')
       else
-        @homeworks = Homework.all
+        @homeworks = Homework.order('created_at DESC')
       end
 
   end
