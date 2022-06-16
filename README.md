@@ -1,24 +1,13 @@
-# README
+# Tech Syndicate
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Logins
 
-Things you may want to cover:
+#### Admin Login
 
-* Ruby version
+Email: admin@gmail.com
+Password: admin123
 
-* System dependencies
+#### student login
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Email: student@gmail.com  
+Password: student123
