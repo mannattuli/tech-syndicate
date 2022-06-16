@@ -31,4 +31,24 @@
 </div>
 <% true %>
 <% end %>
+
+
+<%= render partial: 'answers/form', locals: { answer: @answer } %>
+
+<% if user_signed_in? && current_user.admin %>
+  <h1>Answers</h1>
+  <% @answers.each do |answer| %>
+  <% if answer.id == @homework.id %>
+    <% @user = User.find(answer.user_id) %>
+    <div>
+
+    Student Name: <%= @user.email.split('@')[0] %><br />
+    Answer: <%= link_to answer.title, '/answers/'+answer.id.to_s %>
+
+    </div>
+  <% end %>
+  <% end %>
+
+<% end %>
+
 </div>

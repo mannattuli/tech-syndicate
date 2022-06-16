@@ -16,6 +16,8 @@ class HomeworksController < ApplicationController
 
   # GET /homeworks/1 or /homeworks/1.json
   def show
+    @answers = @homework.answers.all
+    @answer = @homework.answers.build
   end
 
   # GET /homeworks/new

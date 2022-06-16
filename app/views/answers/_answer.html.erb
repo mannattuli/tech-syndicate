@@ -1,0 +1,22 @@
+<div id="<%= dom_id answer %>">
+    <% @user = User.find(answer.user_id) %>
+  <p>
+    <strong>User:</strong>
+    <%= @user.email.split('@')[0] %>
+
+  </p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= answer.title %>
+  </p>
+
+  <p>
+    <strong>Desc:</strong>
+    <%= answer.desc %>
+  </p>
+<br />
+<% if answer.picture.attached? %>
+    <%= cl_image_tag answer.picture.url, :width=>500, :crop=>"fill" %>
+<% end %>
+</div>

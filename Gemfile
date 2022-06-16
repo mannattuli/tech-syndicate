@@ -77,3 +77,4 @@ end
 
 gem "rest-client"
 gem "devise", "~> 4.8"
+gem 'cloudinary'

@@ -1,0 +1,18 @@
+development:
+  cloud_name: themessages
+  api_key: "655532323494956"
+  api_secret: "ZX3KusvRAf2sbr96LV4mcflkF6U"
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: themessages
+  api_key: "655532323494956"
+  api_secret: "ZX3KusvRAf2sbr96LV4mcflkF6U"
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: themessages
+  api_key: "655532323494956"
+  api_secret: "ZX3KusvRAf2sbr96LV4mcflkF6U"
+  enhance_image_tag: true
+  static_file_support: false
