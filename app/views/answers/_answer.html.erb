@@ -1,5 +1,6 @@
 <div id="<%= dom_id answer %>">
     <% @user = User.find(answer.user_id) %>
+    <% @homework = Homework.find(answer.homework_id) %>
   <p>
     <strong>User:</strong>
     <%= @user.email.split('@')[0] %>
@@ -14,6 +15,16 @@
   <p>
     <strong>Desc:</strong>
     <%= answer.desc %>
+  </p>
+
+  <p>
+    <strong>Submitted at:</strong>
+    <%= answer.created_at %>
+  </p>
+
+  <p>
+    <strong>Due Date:</strong>
+    <%= @homework.end %>
   </p>
 <br />
 <% if answer.picture.attached? %>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :answers
+  resources :answers, :except => [:index, :edit]
   devise_for :users
   resources :homeworks
   root 'pages#index'
